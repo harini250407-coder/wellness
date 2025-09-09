@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Career Advisor - Feature Tab</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .tablinks {
+            padding: 12px 24px;
+            background-color: #ccc;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            margin: 0 5px;
+            transition: background-color 0.3s;
+            border-radius: 5px;
+        }
+
+        .tablinks:hover {
+            background-color: #888;
+        }
+
+        .tablinks.active {
+            background-color: #555;
+            color: white;
+        }
+
+        .tabcontent {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ccc;
+            margin-top: 20px;
+            background-color: #fafafa;
+        }
+
+        .tabcontent h2 {
+            color: #333;
+            font-size: 24px;
+        }
+
+        .tabcontent p {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .tabcontent img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .feature-description {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .feature-description img {
+            max-width: 150px;
+        }
+
+        .feature-description .text {
+            max-width: 700px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AI Career Advisor</h1>
+        <div class="tabs">
+            <button class="tablinks" onclick="openFeature(event, 'CareerPath')">Career Path</button>
+            <button class="tablinks" onclick="openFeature(event, 'Skills')">Skills</button>
+            <button class="tablinks" onclick="openFeature(event, 'Courses')">Courses</button>
+        </div>
+
+        <div id="CareerPath" class="tabcontent">
+            <h2>Career Path</h2>
+            <div class="feature-description">
+                <img src="C:\Users\rjhar\OneDrive\Gambar\Screenshots\Screenshot 2025-04-24 175352.png" alt="Career Path Image">
+                <div class="text">
+                    <p>Discover the right career paths based on your skills, interests, and education. Our AI-driven advisor suggests personalized career journeys that align with your unique profile. Whether you're interested in technology, business, healthcare, or any other field, we help you explore various career options, including emerging sectors.</p>
+                    <p>Explore in-depth insights into industry trends, job prospects, and opportunities to enhance your career.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="Skills" class="tabcontent">
+            <h2>Skills</h2>
+            <div class="feature-description">
+                <img src="C:\Users\rjhar\OneDrive\Gambar\Screenshots\Screenshot 2025-04-24 180324.png" alt="Skills Image">
+                <div class="text">
+                    <p>Identify the key skills required for different career paths. Whether it's technical expertise, soft skills, or leadership capabilities, our AI advisor helps you assess your current skill set and suggests areas of improvement. From programming languages to communication skills, we provide a roadmap to building the competencies that will set you up for success in your chosen career path.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="Courses" class="tabcontent">
+            <h2>Courses</h2>
+            <div class="feature-description">
+                <img src="C:\Users\rjhar\OneDrive\Gambar\Screenshots\Screenshot 2025-04-24 180639.png" alt="Courses Image">
+                <div class="text">
+                    <p>Find relevant courses to help you acquire the necessary skills for your career. Whether you're looking for online certifications, university degrees, or specialized workshops, we provide you with a curated list of learning resources that match your goals. From beginner to expert levels, our course suggestions cover a wide range of subjects, so you can continue to grow professionally.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openFeature(evt, featureName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            document.getElementById(featureName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+</html>
